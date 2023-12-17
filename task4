@@ -1,0 +1,6 @@
+table task4 {
+  chain drop_dport_22 {
+    type filter hook input priority 0;
+    tcp dport 22 drop;
+  }
+}
