@@ -1,0 +1,16 @@
+table task8 {
+  set ports {
+    type inet_service
+    elements = {80 , 443}
+  }
+
+  set ip_add {
+    type ipv4_addr
+    elements = {192.168.50.25, 192.168.50.27}
+  }
+
+  chain ts8 {
+    type filter hook input priority 0;
+    ip saddr @ip_add tcp dport @ports drop;
+  }
+}
