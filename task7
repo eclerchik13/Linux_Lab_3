@@ -1,0 +1,6 @@
+table task7 {
+  chain snat_ip {
+    type nat hook postrouting priority 0;
+    ip saddr 192.168.50.27 snat to 192.168.50.183;
+  }
+}
