@@ -1,0 +1,6 @@
+table task5 {
+  chain input443ip {
+    type filter hook input priority 0;
+    tcp dport 443 ip saddr 192.168.50.27 accept;
+  }
+}
